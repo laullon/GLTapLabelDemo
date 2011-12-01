@@ -22,11 +22,15 @@
 
 #import <UIKit/UIKit.h>
 #import "GLTapLabelDelegate.h"
-#import "GLTapLabel.h"
 
-@interface GLViewController : UIViewController <GLTapLabelDelegate>
+@interface GLTapLabel : UILabel
+{
+    @private
+    NSMutableArray *hotZones;
+    NSMutableArray *hotWords;
+    UIFont *hotFont;
+}
 
-@property (weak, nonatomic) IBOutlet GLTapLabel *label;
-@property (weak, nonatomic) IBOutlet UILabel *word;
+@property(nonatomic,assign) id<GLTapLabelDelegate> delegate;
 
 @end

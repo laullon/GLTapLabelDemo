@@ -20,13 +20,12 @@
  * THE SOFTWARE.
  */
 
-#import <UIKit/UIKit.h>
-#import "GLTapLabelDelegate.h"
-#import "GLTapLabel.h"
+#import <Foundation/Foundation.h>
+@class GLTapLabel;
 
-@interface GLViewController : UIViewController <GLTapLabelDelegate>
+@protocol GLTapLabelDelegate <NSObject>
 
-@property (weak, nonatomic) IBOutlet GLTapLabel *label;
-@property (weak, nonatomic) IBOutlet UILabel *word;
+@required
+-(void)label:(GLTapLabel *)label didSelectedHotWord:(NSString *)word;
 
 @end
