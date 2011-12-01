@@ -1,0 +1,444 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		31FBE297148815B30028DD79 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31FBE296148815B30028DD79 /* UIKit.framework */; };
+		31FBE299148815B30028DD79 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31FBE298148815B30028DD79 /* Foundation.framework */; };
+		31FBE29B148815B30028DD79 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31FBE29A148815B30028DD79 /* CoreGraphics.framework */; };
+		31FBE2A1148815B30028DD79 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 31FBE29F148815B30028DD79 /* InfoPlist.strings */; };
+		31FBE2A3148815B30028DD79 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 31FBE2A2148815B30028DD79 /* main.m */; };
+		31FBE2A7148815B30028DD79 /* GLAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 31FBE2A6148815B30028DD79 /* GLAppDelegate.m */; };
+		31FBE2AA148815B40028DD79 /* GLViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 31FBE2A9148815B40028DD79 /* GLViewController.m */; };
+		31FBE2AD148815B40028DD79 /* GLViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 31FBE2AB148815B40028DD79 /* GLViewController.xib */; };
+		31FBE2B5148815B40028DD79 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31FBE2B4148815B40028DD79 /* SenTestingKit.framework */; };
+		31FBE2B6148815B40028DD79 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31FBE296148815B30028DD79 /* UIKit.framework */; };
+		31FBE2B7148815B40028DD79 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31FBE298148815B30028DD79 /* Foundation.framework */; };
+		31FBE2BF148815B40028DD79 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 31FBE2BD148815B40028DD79 /* InfoPlist.strings */; };
+		31FBE2C2148815B40028DD79 /* GLTapLabelDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 31FBE2C1148815B40028DD79 /* GLTapLabelDemoTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		31FBE2B8148815B40028DD79 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 31FBE289148815B30028DD79 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 31FBE291148815B30028DD79;
+			remoteInfo = GLTapLabelDemo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		31FBE292148815B30028DD79 /* GLTapLabelDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GLTapLabelDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		31FBE296148815B30028DD79 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		31FBE298148815B30028DD79 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		31FBE29A148815B30028DD79 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		31FBE29E148815B30028DD79 /* GLTapLabelDemo-Info.plist */ = {isa = PBXFileReference; path = "GLTapLabelDemo-Info.plist"; sourceTree = "<group>"; };
+		31FBE2A0148815B30028DD79 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		31FBE2A2148815B30028DD79 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		31FBE2A4148815B30028DD79 /* GLTapLabelDemo-Prefix.pch */ = {isa = PBXFileReference; path = "GLTapLabelDemo-Prefix.pch"; sourceTree = "<group>"; };
+		31FBE2A5148815B30028DD79 /* GLAppDelegate.h */ = {isa = PBXFileReference; path = GLAppDelegate.h; sourceTree = "<group>"; };
+		31FBE2A6148815B30028DD79 /* GLAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GLAppDelegate.m; sourceTree = "<group>"; };
+		31FBE2A8148815B40028DD79 /* GLViewController.h */ = {isa = PBXFileReference; path = GLViewController.h; sourceTree = "<group>"; };
+		31FBE2A9148815B40028DD79 /* GLViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GLViewController.m; sourceTree = "<group>"; };
+		31FBE2AC148815B40028DD79 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/GLViewController.xib; sourceTree = "<group>"; };
+		31FBE2B3148815B40028DD79 /* GLTapLabelDemoTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GLTapLabelDemoTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		31FBE2B4148815B40028DD79 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		31FBE2BC148815B40028DD79 /* GLTapLabelDemoTests-Info.plist */ = {isa = PBXFileReference; path = "GLTapLabelDemoTests-Info.plist"; sourceTree = "<group>"; };
+		31FBE2BE148815B40028DD79 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		31FBE2C0148815B40028DD79 /* GLTapLabelDemoTests.h */ = {isa = PBXFileReference; path = GLTapLabelDemoTests.h; sourceTree = "<group>"; };
+		31FBE2C1148815B40028DD79 /* GLTapLabelDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GLTapLabelDemoTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		31FBE28F148815B30028DD79 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				31FBE297148815B30028DD79 /* UIKit.framework in Frameworks */,
+				31FBE299148815B30028DD79 /* Foundation.framework in Frameworks */,
+				31FBE29B148815B30028DD79 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		31FBE2AF148815B40028DD79 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				31FBE2B5148815B40028DD79 /* SenTestingKit.framework in Frameworks */,
+				31FBE2B6148815B40028DD79 /* UIKit.framework in Frameworks */,
+				31FBE2B7148815B40028DD79 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		31FBE287148815B30028DD79 = {
+			isa = PBXGroup;
+			children = (
+				31FBE29C148815B30028DD79 /* GLTapLabelDemo */,
+				31FBE2BA148815B40028DD79 /* GLTapLabelDemoTests */,
+				31FBE295148815B30028DD79 /* Frameworks */,
+				31FBE293148815B30028DD79 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		31FBE293148815B30028DD79 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				31FBE292148815B30028DD79 /* GLTapLabelDemo.app */,
+				31FBE2B3148815B40028DD79 /* GLTapLabelDemoTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		31FBE295148815B30028DD79 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				31FBE296148815B30028DD79 /* UIKit.framework */,
+				31FBE298148815B30028DD79 /* Foundation.framework */,
+				31FBE29A148815B30028DD79 /* CoreGraphics.framework */,
+				31FBE2B4148815B40028DD79 /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		31FBE29C148815B30028DD79 /* GLTapLabelDemo */ = {
+			isa = PBXGroup;
+			children = (
+				31FBE2A5148815B30028DD79 /* GLAppDelegate.h */,
+				31FBE2A6148815B30028DD79 /* GLAppDelegate.m */,
+				31FBE2A8148815B40028DD79 /* GLViewController.h */,
+				31FBE2A9148815B40028DD79 /* GLViewController.m */,
+				31FBE2AB148815B40028DD79 /* GLViewController.xib */,
+				31FBE29D148815B30028DD79 /* Supporting Files */,
+			);
+			path = GLTapLabelDemo;
+			sourceTree = "<group>";
+		};
+		31FBE29D148815B30028DD79 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				31FBE29E148815B30028DD79 /* GLTapLabelDemo-Info.plist */,
+				31FBE29F148815B30028DD79 /* InfoPlist.strings */,
+				31FBE2A2148815B30028DD79 /* main.m */,
+				31FBE2A4148815B30028DD79 /* GLTapLabelDemo-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		31FBE2BA148815B40028DD79 /* GLTapLabelDemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				31FBE2C0148815B40028DD79 /* GLTapLabelDemoTests.h */,
+				31FBE2C1148815B40028DD79 /* GLTapLabelDemoTests.m */,
+				31FBE2BB148815B40028DD79 /* Supporting Files */,
+			);
+			path = GLTapLabelDemoTests;
+			sourceTree = "<group>";
+		};
+		31FBE2BB148815B40028DD79 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				31FBE2BC148815B40028DD79 /* GLTapLabelDemoTests-Info.plist */,
+				31FBE2BD148815B40028DD79 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		31FBE291148815B30028DD79 /* GLTapLabelDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 31FBE2C5148815B40028DD79 /* Build configuration list for PBXNativeTarget "GLTapLabelDemo" */;
+			buildPhases = (
+				31FBE28E148815B30028DD79 /* Sources */,
+				31FBE28F148815B30028DD79 /* Frameworks */,
+				31FBE290148815B30028DD79 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GLTapLabelDemo;
+			productName = GLTapLabelDemo;
+			productReference = 31FBE292148815B30028DD79 /* GLTapLabelDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		31FBE2B2148815B40028DD79 /* GLTapLabelDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 31FBE2C8148815B40028DD79 /* Build configuration list for PBXNativeTarget "GLTapLabelDemoTests" */;
+			buildPhases = (
+				31FBE2AE148815B40028DD79 /* Sources */,
+				31FBE2AF148815B40028DD79 /* Frameworks */,
+				31FBE2B0148815B40028DD79 /* Resources */,
+				31FBE2B1148815B40028DD79 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				31FBE2B9148815B40028DD79 /* PBXTargetDependency */,
+			);
+			name = GLTapLabelDemoTests;
+			productName = GLTapLabelDemoTests;
+			productReference = 31FBE2B3148815B40028DD79 /* GLTapLabelDemoTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		31FBE289148815B30028DD79 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
+			buildConfigurationList = 31FBE28C148815B30028DD79 /* Build configuration list for PBXProject "GLTapLabelDemo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 31FBE287148815B30028DD79;
+			productRefGroup = 31FBE293148815B30028DD79 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				31FBE291148815B30028DD79 /* GLTapLabelDemo */,
+				31FBE2B2148815B40028DD79 /* GLTapLabelDemoTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		31FBE290148815B30028DD79 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				31FBE2A1148815B30028DD79 /* InfoPlist.strings in Resources */,
+				31FBE2AD148815B40028DD79 /* GLViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		31FBE2B0148815B40028DD79 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				31FBE2BF148815B40028DD79 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		31FBE2B1148815B40028DD79 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		31FBE28E148815B30028DD79 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				31FBE2A3148815B30028DD79 /* main.m in Sources */,
+				31FBE2A7148815B30028DD79 /* GLAppDelegate.m in Sources */,
+				31FBE2AA148815B40028DD79 /* GLViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		31FBE2AE148815B40028DD79 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				31FBE2C2148815B40028DD79 /* GLTapLabelDemoTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		31FBE2B9148815B40028DD79 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 31FBE291148815B30028DD79 /* GLTapLabelDemo */;
+			targetProxy = 31FBE2B8148815B40028DD79 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		31FBE29F148815B30028DD79 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				31FBE2A0148815B30028DD79 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		31FBE2AB148815B40028DD79 /* GLViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				31FBE2AC148815B40028DD79 /* en */,
+			);
+			name = GLViewController.xib;
+			sourceTree = "<group>";
+		};
+		31FBE2BD148815B40028DD79 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				31FBE2BE148815B40028DD79 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		31FBE2C3148815B40028DD79 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		31FBE2C4148815B40028DD79 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		31FBE2C6148815B40028DD79 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GLTapLabelDemo/GLTapLabelDemo-Prefix.pch";
+				INFOPLIST_FILE = "GLTapLabelDemo/GLTapLabelDemo-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		31FBE2C7148815B40028DD79 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GLTapLabelDemo/GLTapLabelDemo-Prefix.pch";
+				INFOPLIST_FILE = "GLTapLabelDemo/GLTapLabelDemo-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		31FBE2C9148815B40028DD79 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/GLTapLabelDemo.app/GLTapLabelDemo";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GLTapLabelDemo/GLTapLabelDemo-Prefix.pch";
+				INFOPLIST_FILE = "GLTapLabelDemoTests/GLTapLabelDemoTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		31FBE2CA148815B40028DD79 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/GLTapLabelDemo.app/GLTapLabelDemo";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GLTapLabelDemo/GLTapLabelDemo-Prefix.pch";
+				INFOPLIST_FILE = "GLTapLabelDemoTests/GLTapLabelDemoTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		31FBE28C148815B30028DD79 /* Build configuration list for PBXProject "GLTapLabelDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				31FBE2C3148815B40028DD79 /* Debug */,
+				31FBE2C4148815B40028DD79 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		31FBE2C5148815B40028DD79 /* Build configuration list for PBXNativeTarget "GLTapLabelDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				31FBE2C6148815B40028DD79 /* Debug */,
+				31FBE2C7148815B40028DD79 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		31FBE2C8148815B40028DD79 /* Build configuration list for PBXNativeTarget "GLTapLabelDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				31FBE2C9148815B40028DD79 /* Debug */,
+				31FBE2CA148815B40028DD79 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 31FBE289148815B30028DD79 /* Project object */;
+}
