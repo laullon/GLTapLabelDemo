@@ -40,25 +40,40 @@
         [hotWords removeAllObjects];
     }
     
-    NSArray *words = [self.text componentsSeparatedByString:@" "];
-    
     CGSize space = [@" " sizeWithFont:self.font constrainedToSize:rect.size lineBreakMode:self.lineBreakMode];
     __block CGPoint drawPoint = CGPointMake(0,0);
-    
-    [words enumerateObjectsUsingBlock:^(NSString *word, NSUInteger idx, BOOL *stop) {
-        BOOL hot = [word hasPrefix:@"#"] || [word hasPrefix:@"@"];
-        UIFont *f= hot ? hotFont : self.font;
-        CGSize s = [word sizeWithFont:f constrainedToSize:rect.size lineBreakMode:self.lineBreakMode];
-        if(drawPoint.x + s.width > rect.size.width) {
-            drawPoint = CGPointMake(0, drawPoint.y + s.height);
+    NSString *read;
+    NSScanner *s = [NSScanner scannerWithString:self.text];
+    while ([s scanUpToCharactersFromSet:[NSCharacterSet symbolCharacterSet] intoString:&read]) {
+        NSArray *words = [read componentsSeparatedByCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+        [words enumerateObjectsUsingBlock:^(NSString *word, NSUInteger idx, BOOL *stop) {
+            BOOL hot = [word hasPrefix:@"#"] || [word hasPrefix:@"@"];
+            UIFont *f= hot ? hotFont : self.font;
+            CGSize s = [word sizeWithFont:f];
+            if(drawPoint.x + s.width > rect.size.width) {
+                drawPoint = CGPointMake(0, drawPoint.y + s.height);
+            }
+            [word drawAtPoint:drawPoint withFont:f];
+            if(hot){
+                [hotZones addObject:[NSValue valueWithCGRect:CGRectMake(drawPoint.x, drawPoint.y, s.width, s.height)]];
+                [hotWords addObject:word];
+            }
+            drawPoint = CGPointMake(drawPoint.x + s.width + space.width, drawPoint.y);
+        }];
+        
+        while ([s scanCharactersFromSet:[NSCharacterSet symbolCharacterSet] intoString:&read]) {
+            for(int idx=0;idx<read.length;idx=idx+2)
+            {
+                NSString *word=[read substringWithRange:NSMakeRange(idx, 2)];
+                CGSize s = [word sizeWithFont:self.font];
+                if(drawPoint.x + s.width > rect.size.width) {
+                    drawPoint = CGPointMake(0, drawPoint.y + s.height);
+                }
+                [word drawAtPoint:drawPoint withFont:self.font];
+                drawPoint = CGPointMake(drawPoint.x + s.width, drawPoint.y);
+            }
         }
-        [word drawAtPoint:drawPoint withFont:f];
-        if(hot){
-            [hotZones addObject:[NSValue valueWithCGRect:CGRectMake(drawPoint.x, drawPoint.y, s.width, s.height)]];
-            [hotWords addObject:word];
-        }
-        drawPoint = CGPointMake(drawPoint.x + s.width + space.width, drawPoint.y);
-    }];
+    }
 }
 
 -(void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
