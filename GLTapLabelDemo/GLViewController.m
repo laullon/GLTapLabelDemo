@@ -54,6 +54,7 @@
     [super viewWillAppear:animated];
     word.text = @"";
     label.delegate = self;
+    label.linkColor = [UIColor blueColor];
 }
 
 - (void)viewDidAppear:(BOOL)animated
