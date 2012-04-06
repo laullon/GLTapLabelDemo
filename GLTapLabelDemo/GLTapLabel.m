@@ -25,6 +25,7 @@
 @implementation GLTapLabel
 
 @synthesize delegate;
+@synthesize linkColor;
 
 -(void)drawTextInRect:(CGRect)rect
 {
@@ -53,11 +54,15 @@
             if(drawPoint.x + s.width > rect.size.width) {
                 drawPoint = CGPointMake(0, drawPoint.y + s.height);
             }
-            [word drawAtPoint:drawPoint withFont:f];
+            UIColor *origColor = [self textColor];
             if(hot){
                 [hotZones addObject:[NSValue valueWithCGRect:CGRectMake(drawPoint.x, drawPoint.y, s.width, s.height)]];
                 [hotWords addObject:word];
+                [linkColor set];
             }
+            [word drawAtPoint:drawPoint withFont:f];
+            [origColor set];
+            
             drawPoint = CGPointMake(drawPoint.x + s.width + space.width, drawPoint.y);
         }];
         
