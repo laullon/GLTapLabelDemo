@@ -29,6 +29,8 @@
 
 -(void)drawTextInRect:(CGRect)rect
 {
+    UIColor *origColor = [self textColor];
+    [origColor set];
     if(!hotFont){
         hotFont = [UIFont fontWithName:[NSString stringWithFormat:@"%@-Bold",self.font.fontName] size:self.font.pointSize];
     }
@@ -54,7 +56,6 @@
             if(drawPoint.x + s.width > rect.size.width) {
                 drawPoint = CGPointMake(0, drawPoint.y + s.height);
             }
-            UIColor *origColor = [self textColor];
             if(hot){
                 [hotZones addObject:[NSValue valueWithCGRect:CGRectMake(drawPoint.x, drawPoint.y, s.width, s.height)]];
                 [hotWords addObject:word];
