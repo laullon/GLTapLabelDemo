@@ -48,7 +48,32 @@
     NSString *read;
     NSScanner *s = [NSScanner scannerWithString:self.text];
     while ([s scanUpToCharactersFromSet:[NSCharacterSet symbolCharacterSet] intoString:&read]) {
-        NSArray *words = [read componentsSeparatedByCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+        NSArray *origWords = [read componentsSeparatedByCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+        NSMutableArray *words = [NSMutableArray array];
+        for (NSString* word in origWords)
+        {
+            // this is just to avoid ARC complications. We could just as easily make it __strong but then it won't work with non-ARC builds.
+            NSString* origWord = word;
+            NSString* newWord = word;
+            CGSize s = [newWord sizeWithFont:self.font];
+            NSString *cutWord = @"";
+            int c = [word length]-1;
+            while (s.width > rect.size.width) {
+                cutWord = [origWord substringFromIndex:c];
+                newWord = [origWord substringToIndex:c];
+                s = [newWord sizeWithFont:self.font];
+                c -= 1;
+                if (s.width <= rect.size.width)
+                {
+                    [words addObject:newWord];
+                    origWord = cutWord;
+                    s = [origWord sizeWithFont:self.font];
+                    c = [origWord length]-1;
+                }
+            }
+            [words addObject:origWord];
+        }
+        
         [words enumerateObjectsUsingBlock:^(NSString *word, NSUInteger idx, BOOL *stop) {
             BOOL hot = [word hasPrefix:@"#"] || [word hasPrefix:@"@"];
             UIFont *f= hot ? hotFont : self.font;
